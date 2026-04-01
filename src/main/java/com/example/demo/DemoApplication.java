@@ -12,18 +12,16 @@ public class DemoApplication {
 	}
 }
 
-// Controller for Student Greeting
 @RestController
 @RequestMapping("/student")
 class StudentController {
 
-	// Default greeting
 	@GetMapping("/greet")
 	public String greetStudent() {
 		return "Hello Student! Welcome to the system.";
 	}
 
-	// Greeting with name
+
 	@GetMapping("/greet/{name}")
 	public String greetByName(@PathVariable String name) {
 		return "Hello " + name + "! Welcome to the Student Greeting System.";
